@@ -11,12 +11,12 @@ body {
 .main-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   border-top: 10px solid #38df7d;
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -120,6 +120,7 @@ li:last-child {
 }
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 aside {
@@ -131,7 +132,7 @@ aside {
 
   /* border-right: 5px solid #1098ad;
   border-left: 5px solid #1098ad; */
-  padding: 50px 0;
+  padding: 50px 40px;
   width: 500px;
 }
 
@@ -167,7 +168,7 @@ a:active {
 
 nav a:link {
   display: inline-block;
-  margin: 10px 20px 0 0;
+  margin: 0px 20px 0 0;
 }
 
 nav a:link:last-child {
@@ -202,4 +203,84 @@ h2::after {
   font-weight: bold;
   top: -10px;
   right: -25px;
+}
+
+/* Float layouts */
+/* .author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: left;
+  padding-top: 10px;
+  margin-left: 20px;
+} */
+
+/* Flex layouts */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* .row {
+  display: flex;
+  gap: 75px;
+  align-items: flex-start;
+}
+article {
+  flex: 1;
+}
+
+aside {
+  flex: 0 0 300px;
+} */
+
+/* grid layout */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1 / -1;
+}
+
+footer {
+  grid-column: 1 / -1;
 }
